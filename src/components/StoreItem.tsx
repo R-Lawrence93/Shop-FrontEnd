@@ -10,7 +10,7 @@ type StoreItemProps = {
 export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
     return <>
     <div>
-        <img src={imgUrl} style={{objectFit: "cover", height: "200px", width: "200px", margin:"2%"}}></img>
+        <img src={imgUrl} style={{ height: "100%", width: "80%", margin:"2%"}}></img>
         <div className="d-flex justify-content-between align-items-baseline mb-4">
             <span className="">{name}</span>
             <span>{price}</span>

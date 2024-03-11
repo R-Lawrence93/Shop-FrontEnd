@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Iphone",
+        "price": 599.99,
+        "imgUrl": "/images/iphone-15.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Macbook",
+        "price": 999.99,
+        "imgUrl": "/images/iphone-15.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Samsung",
+        "price": 650,
+        "imgUrl": "/images/iphone-15.jpg"
+    },
+    {
+        "id": 4,
+        "name": "LGTv",
+        "price": 1024.99,
+        "imgUrl": "/images/iphone-15.jpg"
+    }
+]

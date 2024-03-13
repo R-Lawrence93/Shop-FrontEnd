@@ -24,9 +24,20 @@
 }
 
 .card {
-    width: 30%;
-    margin: 5%;
-    display: inline-flex;
+    width: 40%;
+    margin: 2% auto;
     padding: 2%;
 
 }
+
+.addBtn {
+    display: flex;
+    justify-content: center;
+
+}
+
+.rmvBtn {
+    justify-content: center;
+    display: flex;
+    margin: 4%;
+} 

@@ -24,10 +24,16 @@
 }
 
 .card {
-    width: 40%;
-    margin: 2% auto;
+    width: 50%;
+    margin: 2%;
     padding: 2%;
 
+}
+
+.cardp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
 }
 
 .addBtn {

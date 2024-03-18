@@ -20,8 +20,8 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
     return <>
     <div>
         <img src={imgUrl} style={{ height: "auto", width: "80%", margin:"2%"}}></img>
-        <div className="d-flex justify-content-between align-items-baseline mb-4">
-            <span className="">{name}</span>
+        <div>
+            <span className=""><b>{name}</b></span>
             <span>{formarCurrency (price)}</span>
 
             </div>

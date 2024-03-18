@@ -5,6 +5,7 @@ import { About } from "./pages/about"
 import { Navbar } from './components/navbar'
 import "./style.css"
 import { ShoppingCartProvider } from "./context/Shoppingcontext"
+import { ShoppingCart } from "./components/ShoppingCart"
 
 function App() {
   return <>
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={ <Home /> } />
       <Route path="/store" element={ <Store /> } />
       <Route path="/About" element={ <About />} />
+      <Route path="/cart" element={ <ShoppingCart />} />
     </Routes>
   </div>
   </ShoppingCartProvider>

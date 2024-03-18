@@ -1,5 +1,6 @@
 import { formarCurrency } from "../utilities/currencyformat"
 import "../style.css"
+import { useShoppingCart } from "../context/Shoppingcontext"
 
 
 type StoreItemProps = {
@@ -13,7 +14,9 @@ type StoreItemProps = {
 
 export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
 
-    const quantity = 0
+    const {getItemQuantity, IncreaseQuantity, DecreaseQuantity, removeFromCart} = useShoppingCart() 
+
+    const quantity = getItemQuantity(id)
     return <>
     <div>
         <img src={imgUrl} style={{ height: "auto", width: "80%", margin:"2%"}}></img>
@@ -26,21 +29,21 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
             <div className="mt-auto">
                 {quantity === 0 ? (
 
-                    <button className="w-100"> + Add To Cart </button>
+                    <button className="w-100" onClick={() => IncreaseQuantity(id)}> + Add To Cart </button>
 
                 ) : <div> 
                         <div className="addBtn" style={{gap: ".5rem"}} >
                             
-                            <button>-</button>
+                            <button onClick={() => DecreaseQuantity(id)}>-</button>
                             <span className="fs-3"> {quantity + " in cart"} </span>
-                            <button>+</button>
+                            <button onClick={() => IncreaseQuantity(id)}>+</button>
 
                         </div>
 
 
                         <div className="rmvBtn">
                             
-                            <button className="bg-danger"> Remove </button>
+                            <button className="bg-danger" onClick={() => removeFromCart(id)}> Remove </button>
                 
                         </div> 
                 

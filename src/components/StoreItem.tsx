@@ -18,7 +18,7 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
 
     const quantity = getItemQuantity(id)
     return <>
-    <div>
+    <div style={{height: "auto"}}>
         <img src={imgUrl} style={{ height: "auto", width: "80%", margin:"2%"}}></img>
         <div>
             <span className=""><b>{name}</b></span>
@@ -29,7 +29,7 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
             <div className="mt-auto">
                 {quantity === 0 ? (
 
-                    <button className="w-100" onClick={() => IncreaseQuantity(id)}> + Add To Cart </button>
+                    <button className="w-100" style={{}} onClick={() => IncreaseQuantity(id)}> + Add To Cart </button>
 
                 ) : <div> 
                         <div className="addBtn" style={{gap: ".5rem"}} >

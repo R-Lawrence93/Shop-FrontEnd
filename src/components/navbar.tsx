@@ -4,15 +4,15 @@ import { useShoppingCart } from "../context/Shoppingcontext";
 
 export function Navbar() {
 
-	const { openCart, cartQuantity } = useShoppingCart()
+	const { cartQuantity } = useShoppingCart()
     return <>
-        <div className="navbar">
+        <div className="navbar" style={{position: "sticky", top:"0"}}>
         <div className="links">
             <Link to="/">Home</Link>
             <Link to="/store">Store</Link>
             <Link to="/about">About</Link>
        </div>
-            <Link to="/cart" className="cartButton" onClick={openCart}>
+            <Link to="/cart" className="cartButton">
 				
 <svg fill="#000000" version="1.1" id="Capa_1"
 	 width="3rem" height="3rem" viewBox="0 0 902.86 902.86">
